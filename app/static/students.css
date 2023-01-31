@@ -1,0 +1,54 @@
+.table {
+    margin-left: 0!important;
+    
+}
+
+.row{
+    justify-content: center;
+}
+
+
+.container {
+    
+    padding: 1.5rem;
+    
+}
+
+
+.dataTables_wrapper{
+    padding: 0.5rem;
+}
+
+.card-body{
+    margin: 1rem;
+}
+
+#preview{
+    display: none;
+    height: 600px;
+    width: 600px;
+}
+
+
+.image-container{
+    justify-content: center!important;
+    display: flex!important;
+    align-items: center;
+}
+
+.body {
+    overflow: scroll!important;
+    
+}
+.table {
+    text-align: center!important;
+    justify-content: center!important;
+  }
+  
+.table tbody{
+    vertical-align: baseline!important;
+}
+
+img{
+    border-radius: 50%;
+}

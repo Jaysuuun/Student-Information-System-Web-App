@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body%}
+<div class="container">
+<div class="card-body">
+<div class = "form form-group" >
+    {%block header%}<h1>College Data</h1>{%endblock%}
+    <div class="row">
+        <div class="col-md-4">
+          {% with messages = get_flashed_messages()  %}
+          {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+          </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        </div>
+    <form method = 'POST' action= "/update_course/{{ course ['COURSE'] }}">
+        {{ form.hidden_tag() }}
+        <br/>
+
+        {{form.COURSE.label(class = "form-label")}}
+        {{ form.COURSE(class = "form-control", value= course['COURSE']) }}
+        <br/>
+        {{form.CNAME.label(class = "form-label")}}
+        {{ form.CNAME(class = "form-control", value= course['NAME']) }}
+        <br/>
+        {{form.COLLEGEID.label(class = "form-label")}}
+        {{ form.COLLEGEID(class = "form-control", value= course['COLLEGE']) }}
+        <br/>
+        <a href="/Course" class="btn btn-danger">Cancel</a>
+        {{ form.Submit(class = "btn btn-primary", value = "SAVE")}}
+    </form>
+</div>
+</div>
+</div>
+{% endblock %}

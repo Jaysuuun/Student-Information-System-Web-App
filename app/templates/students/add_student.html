@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block body%}
+<div class="container">
+<div class="card-body">
+<div class = "form form-group" >
+    {%block header%}<h1>Student Data</h1>{%endblock%}
+    <div class="row">
+        <div class="col-md-4">
+          {% with messages = get_flashed_messages()  %}
+          {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+          </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        </div>
+    <div class="image-container">
+    <img id="imagePreview" src="https://placehold.jp/300x300.png" alt="" style="width:300px; height:300px;" />
+    </div>
+    <form method = 'POST' action= "/add_student" enctype="multipart/form-data" >
+        {{ form.hidden_tag() }}
+        <br/>
+        {{ form.image(class='form-control', id='image-input', accept="image/*") }}
+        
+        <br/>
+
+        {{form.IDN.label(class = "form-label")}}
+        {{ form.IDN(class = "form-control") }}
+        <br/>
+        {{form.Fname.label(class = "form-label")}}
+        {{ form.Fname(class = "form-control") }}
+        <br/>
+        {{form.Mname.label(class = "form-label")}}
+        {{ form.Mname(class = "form-control") }}
+        <br/>
+        {{form.Lname.label(class = "form-label")}}
+        {{ form.Lname(class = "form-control") }}
+        <br/>
+        {{form.Gender.label(class = "form-label")}}
+        {{ form.Gender(class = "form-select") }}
+        <br/>
+        {{form.College.label(class = "form-label")}}
+        {{ form.College(class = "form-select", id = "colleges") }}
+
+        <br/>
+        {{form.Courses.label(class = "form-label")}}
+        {{ form.Courses(class = "form-select", id = "courses") }}
+        <br/>
+
+        {{form.Year_Level.label(class = "form-label")}}
+        {{ form.Year_Level(class = "form-select") }}
+        <br/><br/>
+
+        <button type="reset" class = "btn btn-danger"> Cancel </button>
+        {{ form.Submit(class = "btn btn-primary")}}
+    </form>
+</div>
+</div>
+</div>
+{% endblock %}
