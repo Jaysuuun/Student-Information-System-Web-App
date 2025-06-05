@@ -21,12 +21,12 @@ This project was a requirement for my Application Development class back in 2022
 
 ## 📦 How to Run
 
-##1. Clone the repository:
+## 1. Clone the repository:
    ```bash
    git clone https://github.com/Jaysuuun/Student-Information-System-Web-App.git
    ```
 
-##2. Create a .env file:
+## 2. Create a .env file:
     Create a .env file in the root directory with the following format:
    ```bash
    DB_USERNAME=
@@ -40,7 +40,7 @@ This project was a requirement for my Application Development class back in 2022
 
    ```
 
-##3. Set up a virtual environment:
+## 3. Set up a virtual environment:
    ## Windows:
    ```shell
     py -3 -m venv .venv
@@ -53,21 +53,20 @@ This project was a requirement for my Application Development class back in 2022
     source .venv/bin/activate
    ```
 
-##4. Install dependencies
+## 4. Install dependencies
    ```shell
     pip install -r requirements.txt
    ```
 
-##5. Set up the database
+## 5. Set up the database
    Create a MySQL database with your preferred name (e.g. siswebapp). Then run the SQL file provided in the project, or copy its contents and execute them manually.
 
-##6. Run the application:
+## 6. Run the application:
    ```shell
    python run.py
    ```
 
-#NOTES
-## 1. Feel free to modify or upgrade your own version of this web application.
-
-## 2. Please note that some dependencies may be outdated. It is recommended to upgrade them for better security and compatibility.
+## NOTES
+   - Feel free to modify or upgrade your own version of this web application.
+   - Please note that some dependencies may be outdated. It is recommended to upgrade them for better security and compatibility.
 
